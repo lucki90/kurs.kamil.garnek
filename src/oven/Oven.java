@@ -1,7 +1,14 @@
+package oven;
+
 public class Oven implements BakingOven, RoastingOven {
 
     int time;
     int temperature;
+
+    private void turnOn() {
+       /* System.out.println(String.format("Start.Heat up to %s and work for %d minutes.", temperature, time));*/
+        System.out.println("Start.Heat up to :"+ temperature +" "+ "and work for:"+ time);
+    }
 
     @Override
     public void bakeCookies() {
@@ -24,7 +31,5 @@ public class Oven implements BakingOven, RoastingOven {
         turnOn();
     }
 
-    private void turnOn() {
-        System.out.println(String.format("Start.Heat up to %s and work for %d minutes.", temperature, time));
-    }
+
 }
