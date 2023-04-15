@@ -20,16 +20,29 @@ public class Main {
         // poszczegolne wynii=ki
         Wynik angielski = new Wynik(1, Przedmioty.ANGIELSKI);
         Wynik matematyka = new Wynik(2, Przedmioty.MATEMATYKA);
+        Wynik chemia = new Wynik(4, Przedmioty.CHEMIA);
+        Wynik polski = new Wynik(3,Przedmioty.POLSKI);
+        Wynik WOS = new Wynik(5,Przedmioty.WOS);
+        Wynik informatyka = new Wynik(4,Przedmioty.INFORMATYKA);
         //tworzenie listy wynikow
-        List<Wynik> wyniks = new ArrayList<>();
+        List<Wynik> wynikStudenta = new ArrayList<>();
         //dodanie wynikow do listy wyniks
-        wyniks.add(angielski);
-        wyniks.add(matematyka);
+        wynikStudenta.add(angielski);
+        wynikStudenta.add(matematyka);
+        wynikStudenta.add(chemia);
+        wynikStudenta.add(WOS);
+        wynikStudenta.add(polski);
+        wynikStudenta.add(informatyka);
         //Stworzenie studenta
-        Student student = new Student("Pawel", wyniks);
+        Student student = new Student("Pawel", wynikStudenta);
         //Przypisanie studentowi listy wynikow
 
         Kalkulator kalkulator = new Kalkulator();
+        System.out.println("Srednia wszystkich ocen to: ");
         System.out.println(kalkulator.sredniaWszystkichOcen(student));
+        System.out.println("Srednia z przedmiotw scislych: ");
+        System.out.println(kalkulator.sredniaPrzedmiotowScislych(student));
+        System.out.println("Srednia z przedmiotow nie scislych: ");
+        System.out.println(kalkulator.sredniaPrzedmiotowNieScislych(student));
     }
 }

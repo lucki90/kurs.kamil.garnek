@@ -39,7 +39,15 @@ public class Kalkulator {
 
     public double sredniaPrzedmiotowNieScislych(Student student) {
 
+        double sumaOcen = 0;
+        double iloscPrzedmiotow = 0;
+        for (Wynik wynik : student.getDzienniczek()) {
+            if (wynik.getPrzedmiot().isCzyHumanistyczny()) {
+                sumaOcen = sumaOcen + wynik.getOcena();
+                iloscPrzedmiotow++;
+            }
+        }
 
-        return 0;
+        return sumaOcen / iloscPrzedmiotow;
     }
 }
