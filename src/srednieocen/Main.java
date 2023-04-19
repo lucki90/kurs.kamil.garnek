@@ -38,11 +38,14 @@ public class Main {
         //Przypisanie studentowi listy wynikow
 
         Kalkulator kalkulator = new Kalkulator();
+
+
         System.out.println("Srednia wszystkich ocen to: ");
         System.out.println(kalkulator.sredniaWszystkichOcen(student));
         System.out.println("Srednia z przedmiotw scislych: ");
         System.out.println(kalkulator.sredniaPrzedmiotowScislych(student));
         System.out.println("Srednia z przedmiotow nie scislych: ");
         System.out.println(kalkulator.sredniaPrzedmiotowNieScislych(student));
+
     }
 }
