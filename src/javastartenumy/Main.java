@@ -22,7 +22,6 @@ public class Main {
         for (FilmType filmType : filmTypes) {
             System.out.println(filmType.name());
         }
-
         String userChoice = scanner.nextLine();
 
         FilmType filmType = FilmType.valueOf(userChoice);
@@ -31,10 +30,9 @@ public class Main {
         for (Movie movie : filmList) {
             if (movie.getFilmType() == filmType)
                 System.out.println(movie.getTitle() + " " + movie.getFilmType());
-
         }
 
     }
 
-
 }
+
