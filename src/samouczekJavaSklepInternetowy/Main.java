@@ -22,8 +22,8 @@ public class Main {
         sklep.przygotujTowary();
         boolean czyKontynuowacZakupy = true;
 
-        while (czyKontynuowacZakupy) {
-            System.out.println("Wybierz jedna z opcji:");
+        while (czyKontynuowacZakupy) { // mozesz tak zostawic, ale tutaj lepiej uzyc do...while, zeby wszedl w ten fragment kodu niezaleznie od 'czyKontynuowacZakupy' 
+            System.out.println("Wybierz jedna z opcji:"); 
             System.out.println("1.Wyswietl liste przygotowanych towarow");
             System.out.println("2.Dodaj towar do koszyka");
             System.out.println("3.usun towar z koszyka");
@@ -33,7 +33,13 @@ public class Main {
 
             int wyborUzytkownia = scanner.nextInt();
 
-            switch (wyborUzytkownia) {
+            switch (wyborUzytkownia) { // tutaj docelowo mozesz uzyc enuma do trzymania stanu. 
+                    //np pierwszy switch trzyma stan: LOGIN, REGISTRATION, EXIT i odpowiednio po zaznaczeniu wyswietlic formularz logowania. rejestracji lub wyjsc z apki
+                    
+                    
+                    //pozniej w zaleznosci od tego co uzytkownik zaznaczyl w poprzednim switchu
+                    //tutaj wyswietlic osobne opcje jesli wybral REGISTRATION, LOGIN, a jesli sie zalogował np. LOGGED i wtedy wyswietlic ponizsze opcje
+                    // do kazdego wyboru tez powinien isc komunikat w stylu, jak wybierasz '1' to komuniat "Dostępne produkty to:"
                 case 1 -> sklep.wyswietlTowary();
                 case 2 -> koszyk.dodajPrzedmiotDoKoszyka();
                 case 3 -> System.out.println("wybrano 3");
