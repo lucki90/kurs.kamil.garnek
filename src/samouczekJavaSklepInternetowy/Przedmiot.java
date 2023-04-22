@@ -12,7 +12,7 @@ public class Przedmiot {
                 '}';
     }
 
-    public Przedmiot  (String name, double cena) {
+    public Przedmiot  (String name, double cena) { //dbaj o porzadek, dobra praktyka jest zeby pola byly na gorze ( masz tak) pozniej konstruktor, dalej gettery/setter a toString na koncu
         this.name = name;
         this.cena = cena;
     }
